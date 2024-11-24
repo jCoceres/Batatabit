@@ -436,8 +436,9 @@ main {
 .plans-container--card {
     position: relative;
     margin: 5px;
-    width: 190px;
+    padding: 15px;
     min-width: 190px;
+    max-width: 300px;
     height: 247px;
     border-radius: 8px;
     background-color: var(--color-light);
@@ -445,36 +446,40 @@ main {
 }
 
 
-.plans-container--card>p {
-    position: absolute;
-    top: -10px;
+.recomended {
+    background-color: var(--color-primary);
     border-radius: 8px;
+    color: var(--color-light);
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--color-light);
+    height: 31px;
+    left: calc(50% - 60px);
     line-height: 1.45rem;
     padding: 8px;
-    left: calc(50% - 50px);
-    background-color: var(--color-primary);
+    position: absolute;
+    text-align: center;
+    top: -15px;
+    width: 120px;
 }
 
 .plans-container--card:not(.principal) {
     opacity: 50%;
 }
 
-.plans-container--card div {
+.plan-info-container {
     text-align: center;
 }
 
-.plans-container--card div h3 {
+.plan-card--title {
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 10px;
+    color: black;
 }
 
-.plans-container--card div p:nth-child(2) {
+.plan-card--price {
     font-family: "inter", sans-serif;
     font-weight: 700;
     font-size: 5.2rem;
@@ -482,26 +487,27 @@ main {
     position: relative;
 }
 
-.plans-container--card div p span {
+.plan-card--price span {
+    color: #363636;
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.5rem;
     position: absolute;
-    left: 50px;
+    left: calc(50% - 42px);
     top: 10px;
 }
 
-.plans-container--card div p:nth-child(3) {
+.plan-card--saving {
     font-family: "inter", sans-serif;
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: #757575;
-    padding: 10px 12px;
+    padding: 10px 0;
     margin-bottom: 12px;
 }
 
-.plans-container--card button {
+.plan-card--ca {
     border: 2px solid var(--color-primary);
     border-radius: 4px;
     padding: 12px 16px;
@@ -510,10 +516,11 @@ main {
     line-height: 1.8rem;
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.plans-container--card button span {
+.plan-card--ca span {
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -527,7 +534,6 @@ footer {
     height: 150px;
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
 }
 
 footer section {
@@ -535,30 +541,30 @@ footer section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    width: 50%;
 }
 
-footer section ul {}
-
-footer section ul li {
-    list-style: none;
-    padding: 4px 16px;
-}
-
-footer section ul li a {
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--color-light);
+footer .left ul {
     font-size: 1.4rem;
+    font-weight: 500;
     line-height: 1.8rem;
-
+    list-style: none;
 }
 
-footer section img {
+footer .left ul li {
+    margin: 10px 0;
+}
+
+footer .left ul li a {
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+footer .rigth img {
     height: 24px;
 }
 
-footer section p {
+footer .rigth p {
     color: var(--color-primary-soft);
     font-weight: 500;
     font-size: 0.8rem;
