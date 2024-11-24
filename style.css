@@ -4,7 +4,7 @@
     --color-dark: #282623;
     --color-light: #fff;
     --color-ligt-darker: #bababa;
-    --color-primary-soft: #ffe9d5;
+    --color-primary-soft: #ffe9d4;
     --color-primary: #f7931a;
     --color-secondary-soft: #e7f5ff;
     --color-secondary: #1a9af7;
@@ -410,6 +410,7 @@ main {
 }
 
 .plans--title h2 {
+    color: var(--color-dark-warm);
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.6rem;
@@ -524,6 +525,49 @@ main {
 footer {
     background-color: var(--color-primary);
     height: 150px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+footer section ul {
+    margin-right: 40px;
+}
+
+footer section ul li {
+    list-style: none;
+    padding: 4px 16px;
+}
+
+footer section ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-light);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+}
+
+footer section img {
+    height: 24px;
+}
+
+footer section p {
+    color: var(--color-primary-soft);
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+    margin-top: 12px;
+
+
 }
 
 @media (min-width: 600px) {
