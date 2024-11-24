@@ -145,12 +145,19 @@ main {
 
 .main-tables-container {
     display: flex;
-    flex-direction: column;
+    gap: 15px;
     align-items: center;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
     width: 70%;
     margin: 0 auto;
     min-width: 235px;
     max-width: 500px;
+    justify-content: space-between;
+}
+
+.main-tables-container div {
+    scroll-snap-align: center;
 }
 
 .main-tables-container h3 {
@@ -213,7 +220,7 @@ main {
 }
 
 .table--container .top-left {
-    border-top-left-radius: 15 px;
+    border-top-left-radius: 15px;
 }
 
 .table--container .top-rigth {
@@ -230,26 +237,6 @@ main {
 
 .table--title {
     color: var(--color-secondary);
-}
-
-.table--arrow-left,
-.table--arrow-right {
-    background-image: url("./asets/icons/arrow-left.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 24px;
-    position: absolute;
-    top: calc(50% - 12px);
-    width: 24px;
-}
-
-.table--arrow-left {
-    right: -36px;
-}
-
-.table--arrow-right {
-    left: -36px;
-    transform: rotate(180deg);
 }
 
 .table--date {
@@ -396,6 +383,9 @@ main {
 }
 
 .main-plans-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     min-width: 320px;
     padding-bottom: 70px;
@@ -417,6 +407,8 @@ main {
     padding: 50px 12px 16px;
 }
 
+.asd {}
+
 .plans--title p {
     font-weight: 500;
     font-size: 1.4rem;
@@ -428,9 +420,12 @@ main {
 .plans-container--slider {
     display: flex;
     overflow-x: scroll;
-    justify-content: center;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
     padding-top: 20px;
-    width: 100%;
+    gap: 5px;
+    width: 80%;
+    justify-content: space-between;
 }
 
 .plans-container--card {
@@ -443,6 +438,7 @@ main {
     min-width: 190px;
     padding: 15px;
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
 }
 
@@ -463,9 +459,6 @@ main {
     width: 120px;
 }
 
-.plans-container--card:not(.principal) {
-    opacity: 50%;
-}
 
 .plan-info-container {
     text-align: center;
@@ -579,8 +572,4 @@ footer .rigth p {
 
 }
 
-@media (min-width: 600px) {
-    .plans-container--card:not(.principal) {
-        opacity: 100%;
-    }
-}
+@media (min-width: 600px) {}
