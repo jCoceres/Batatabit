@@ -527,7 +527,7 @@ footer {
     height: 150px;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 footer section {
@@ -538,9 +538,7 @@ footer section {
 
 }
 
-footer section ul {
-    margin-right: 40px;
-}
+footer section ul {}
 
 footer section ul li {
     list-style: none;
