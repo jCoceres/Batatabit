@@ -325,7 +325,6 @@ main {
     max-width: 400px;
     min-width: 288px;
     width: 100%;
-
 }
 
 .product-detail--card {
@@ -396,13 +395,17 @@ main {
 }
 
 .main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
     background-color: var(--color-background);
 }
 
 .plans--title {
+    width: 90%;
     text-align: center;
-    min-width: 320px;
-
+    min-width: 288px;
+    margin: 0 auto;
 }
 
 .plans--title h2 {
@@ -421,18 +424,24 @@ main {
 }
 
 .plans-container--slider {
-    padding-bottom: 60px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    padding-top: 20px;
+    width: 100%;
 }
 
 .plans-container--card {
     position: relative;
-    margin: 0 auto;
+    margin: 5px;
     width: 190px;
+    min-width: 190px;
     height: 247px;
     border-radius: 8px;
     background-color: var(--color-light);
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
 }
+
 
 .plans-container--card>p {
     position: absolute;
@@ -445,6 +454,10 @@ main {
     padding: 8px;
     left: calc(50% - 50px);
     background-color: var(--color-primary);
+}
+
+.plans-container--card:not(.principal) {
+    opacity: 50%;
 }
 
 .plans-container--card div {
@@ -505,4 +518,15 @@ main {
     background-image: url(/asets/icons/arrow-right.svg);
     background-size: cover;
     margin-left: 10px;
+}
+
+footer {
+    background-color: var(--color-primary);
+    height: 150px;
+}
+
+@media (min-width: 600px) {
+    .plans-container--card:not(.principal) {
+        opacity: 100%;
+    }
 }
