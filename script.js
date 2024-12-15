@@ -1,21 +1,20 @@
-
-let nombre = prompt("Ingrese su Nombre");
-let edad = prompt("ingrese su edad");
-edad = parseInt(edad);
-// if (isNaN(edad)) {
-//     alert("no es un numero");
-// }
-// let mayor = `${nombre}  es mayor de edad y tiene ${edad} años`;
-let menor = nombre.concat(" no es mayor de edad, tiene ", edad, " años.");
+const itemsArray = document.getElementsByClassName("item");
 
 
+for (let i = 0; i < itemsArray.length; i++) {
+    if (itemsArray[i] == itemsArray[1]) {
+        itemsArray[i].textContent = "hola";
+        itemsArray[i].style.backgroundColor = "red"
+    }
 
-let mayor = [nombre, "es mayor de edad y tiene", edad, "años"];
-let mensaje = mayor.join(" ");
+}
+function modoVerde() {
+    let titulo = document.getElementById("titulo");
+    let color = titulo.className;
+    if (color == "verde") {
+        titulo.classList.remove("verde");
+    } else {
+        titulo.classList.add("verde");
 
-
-if (edad >= 18) {
-    console.log(mensaje);
-} else {
-    console.log(menor);
+    }
 }
